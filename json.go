@@ -32,6 +32,6 @@ func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
         http.Error(w, "Failed to write response", http.StatusInternalServerError)
         return
     }
-    log.Printf("Write to response success",data)
+    log.Printf("Write %d bytes to response successfully",data)
 
 }
