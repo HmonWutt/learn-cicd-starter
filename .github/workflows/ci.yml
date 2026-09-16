@@ -38,10 +38,8 @@ jobs:
         run: test -z $(go fmt ./...)
       
       - name: Check linting issues
-        uses: dominikh/staticcheck-action@v1
+        uses: dominikh/staticcheck-action@v1.3.1
         with:
           version: "latest"
           install-go: false
-          cache-key: ${{ matrix.go }}
-          working-directory: ${{ matrix.dir }}
 
