@@ -38,8 +38,7 @@ jobs:
         run: test -z $(go fmt ./...)
       
       - name: Check linting issues
-        uses: dominikh/staticcheck-action@v1.3.1
+        uses: dominikh/staticcheck-action@v1
         with:
           version: "latest"
-          install-go: false
 
