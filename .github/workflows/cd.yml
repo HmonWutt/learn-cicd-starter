@@ -1,0 +1,18 @@
+on:
+  push:
+    branches: [main]
+jobs:
+  Depoly: 
+    name: Deploy container
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+
+      - name: Build app
+        run: ./scripts/buildprod.sh
+
